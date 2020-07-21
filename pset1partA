@@ -1,0 +1,17 @@
+#Part A: House Hunting
+annual_income = int(input("Enter your annual salary:"))
+portion_saved = float(input("Enter the percent of your salary to save, as a decimal:"))
+cost = int(input("Enter the cost of your dream home:"))
+
+
+
+monthly = (portion_saved) * ((annual_income)/12)
+down_payment =0.25*(cost)
+current_savings = 0
+counter = 0
+while (current_savings <= down_payment):
+    current_savings = monthly + current_savings
+    current_savings = current_savings + current_savings*(0.04/12)
+    counter += 1
+
+print("Number of months:" , (counter)) #+ can only be used for strings so make sure to convert it
